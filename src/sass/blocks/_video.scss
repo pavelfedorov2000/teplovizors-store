@@ -1,0 +1,21 @@
+.video {
+    position: relative;
+    img {
+        max-width: 100%;
+    }
+}
+
+.video-player {
+    @include centerXY;
+    border-radius: 50%;
+    background: $orange-gradient;
+    @include center;
+    cursor: pointer;
+}
+
+@media(max-width: 575px) {
+    .video-player {
+        width: 70px;
+        height: 70px;
+    }
+}

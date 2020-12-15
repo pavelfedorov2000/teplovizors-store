@@ -1,0 +1,124 @@
+.not-found-page {
+    height: 100vh;
+    text-align: center;
+    @include center;
+
+    &__inner {
+        @include column;
+        align-items: center;
+    }
+
+    // .not-found-page__title
+
+    &__title {
+        position: relative;
+        width: 518px;
+        height: 219px;
+        background-image: url('../img/404-page/0.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0 128px;
+        margin: 0 auto;
+        margin-bottom: 77px;
+        &:before, &:after {
+            content: '';
+            @include centerY;
+            width: 128px;
+            height: 148px;
+            background-image: url('../img/404-page/4.svg');
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
+        }
+    }
+
+    // .not-found-page__subtitle
+
+    &__subtitle {
+        margin-bottom: 14px;
+    }
+
+    // .not-found-page__text
+
+    &__text {
+        font-size: 16px;
+        line-height: 20px;
+        color: #828282;
+        margin-bottom: 50px;
+    }
+
+    // .not-found-page__return-link
+
+    &__return-link {
+        padding: 18px 32px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 991px) {
+    .not-found-page {
+    
+        // .not-found-page__title
+    
+        &__title {
+            margin-bottom: 68px;
+        }
+    
+        // .not-found-page__text
+    
+        &__text {
+            margin-bottom: 42px;
+        }
+    
+        // .not-found-page__return-link
+    
+        &__return-link {
+            padding: 14px 32px;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .not-found-page {
+    
+        // .not-found-page__title
+    
+        &__title {
+            width: 270px;
+            height: 114px;
+            background-size: 106px 114px;
+            margin-bottom: 29px;
+            padding: 0 66px;
+            &:before, &:after {
+                width: 67px;
+                height: 78px;
+                background-image: url('../img/404-page/mobile-4.svg');
+            }
+        }
+
+        &__subtitle {
+            order: -1;
+            margin-bottom: 35px;
+        }
+    
+        // .not-found-page__text
+    
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 29px;
+        }
+    
+        // .not-found-page__return-link
+    
+        &__return-link {
+            padding: 14px 45px;
+        }
+    }
+}

@@ -1,0 +1,173 @@
+.contacts {
+    margin-bottom: 60px;
+
+    // .contacts__title
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    // .contacts__item
+
+    &__item {
+        border-bottom: 0.7px solid rgba(#4F4F4F, .15);
+        padding-bottom: 39px;
+        margin-bottom: 39px;
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    // .contacts__item-title
+
+    &__item-title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 20px;
+    }
+
+    // .contacts__list-item
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // .contacts__list-icon
+
+    &__list-icon {
+        width: 30px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(114, 114, 114, 0.25);
+        border-radius: 3px;
+        @include center;
+        margin-right: 12px;
+    }
+
+    &__map-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.about {
+    margin-bottom: 30px;
+
+    // .about__inner
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    // .about__title
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    // .about__text
+
+    &__text {
+        line-height: 22px;
+    }
+
+    // .about__list
+
+    &__list {
+        display: inline-block;
+        margin: 20px 0;
+    }
+    &__list + &__list {
+        margin-left: 48px;
+    }
+}
+
+.message-form {
+    width: 100%;
+    min-height: 667px;
+    background: #FFFFFF;
+    border-radius: $card-radius;
+    padding: 40px 30px;
+
+    // .message-form__title
+
+    &__title {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    // .message-form__label
+
+    &__label {
+        font-size: 12px;
+        line-height: 20px;
+        color: #4F4F4F;
+        margin-bottom: 6px;
+    }
+
+    // .message-form__textarea
+
+    &__textarea {
+        min-height: 230px;
+        margin-bottom: 25px;
+    }
+}
+
+.benefits {
+    margin-bottom: 90px;
+
+    &__title {
+        max-width: 339px;
+        margin-bottom: 30px;
+    }
+
+    // .benefits__item-icon
+
+    &__item-icon {
+        width: 65px;
+        height: 65px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 6px rgba(158, 158, 158, 0.22);
+        border-radius: 6px;
+        @include center;
+        margin-bottom: 25px;
+    }
+
+    // .benefits__item-title
+
+    &__item-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.15px;
+        margin-bottom: 5px;
+    }
+}
+
+.requisites {
+    margin-bottom: 137px;
+
+    // .requisites__title
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    b {
+        margin-right: 5px;
+    }
+}

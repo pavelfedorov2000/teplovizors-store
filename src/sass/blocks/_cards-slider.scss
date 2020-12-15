@@ -1,0 +1,101 @@
+.cards-slider {
+    margin-bottom: 120px;
+    &__inner {
+        width: 100%;
+    }
+    &__item {
+        position: relative;
+        width: 350px;
+        min-height: 408px;
+        background: radial-gradient(40.92% 40.92% at 50% 0%, #5D9CDE 0%, rgba(1, 39, 79, 0) 100%), $accent;
+        border-radius: $card-radius;
+        color: $white;
+        padding: 119px 32px 54px;
+    }
+    &__item-img {
+        @include centerX;
+        top: -62px;
+        z-index: 100;
+        display: block;
+        margin-bottom: 27px;
+    }
+    &__item-aside {
+        position: absolute;
+        display: block;
+        top: 146px;
+        left: 0;
+        width: 8px;
+        height: 48px;
+        background: $white;
+    }
+    &__item-category {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        margin-bottom: 9px;
+    }
+    &__item-title {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 50px;
+        margin-bottom: 11px;
+    }
+    &__item-descr {
+        min-height: 100px;
+        margin-bottom: 32px;
+    }
+    &__item-more {
+        line-height: 17px;
+        font-weight: 700;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        color: $white;
+        margin-right: 10px;
+    }
+    .slick {
+        &-slide {
+            margin: 0 15px;
+        }
+        &-list {
+            padding-top: 62px;
+        }
+        &-dots {
+            bottom: -60px;
+            li {
+                margin: 0 4.5px;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .cards-slider {
+        &__item {
+            width: 306px;
+            min-height: 350px;
+            padding: 97px 20px 40px 25px;
+        }
+        &__item-aside {
+            display: none;
+        }
+        &__item-category {
+            margin-bottom: 6px;
+        }
+        &__item-title {
+            font-size: 26px;
+            line-height: 38px;
+            margin-bottom: 13px;
+        }
+        &__item-descr {
+            margin-bottom: 23px;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .cards-slider {
+        &__item {
+            width: 100%;
+        }
+    }
+}

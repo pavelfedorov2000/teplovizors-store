@@ -1,0 +1,23 @@
+.breadcrumbs {
+    margin: 40px 0;
+    &__item {
+        position: relative;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 20px;
+        color: #828282;
+        padding-right: 23px;
+        margin-right: 15px;
+        &:after {
+            content: '';
+            @include centerY;
+            right: 0;
+            width: 8px;
+            height: 14px;
+            background-image: url('../img/icons/arrows/arrow-right.svg');
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+}

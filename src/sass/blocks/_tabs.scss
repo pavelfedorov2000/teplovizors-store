@@ -1,0 +1,20 @@
+.tabs__content {
+    display: none;
+    &--active {
+        display: block;
+    }
+}
+
+/* .tab {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    letter-spacing: -0.01em;
+    color: #828282;
+    &--active {
+        color: $accent;
+        span {
+            border-bottom: 2px solid $accent;
+        }
+    }
+} */

@@ -1,0 +1,212 @@
+.modal {
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: $card-radius;
+    &__form-header {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    &__form-title {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: $border;
+        margin-bottom: 32px;
+    }
+
+    &__form-rate {
+        //height: 42px;
+        padding: 8px 30px;
+    }
+
+    &__form-textarea {
+        margin-bottom: 20px;
+    }
+
+    &__form-product {
+        display: flex;
+        padding: 15px 0;
+        border-top: $border;
+        border-bottom: $border;
+        margin-bottom: 30px;
+        div {
+            margin-left: 20px;
+        }
+    }
+
+    &__form-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    &__form-footer {
+        padding-top: 20px;
+        font-size: 10px;
+        line-height: 18px;
+        color: #828282;
+        text-align: center;
+        a {
+            font-weight: 600;
+            color: $accent;
+        }
+        &--border {
+            text-align: left;
+            border-top: $border;
+            margin-top: 33px;
+        }
+    }
+
+    &__thanks-title {
+        margin-bottom: 14px;
+    }
+    &__thanks-suptitle {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    &__thanks-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &__close {
+        position: absolute;
+        font-size: 50px;
+        top: 10px;
+        right: 20px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+}
+
+#write-review {
+    width: 539px;
+    min-height: 819px;
+    .modal__form-textarea {
+        min-height: 230px;
+    }
+}
+
+#one-click-buy {
+    width: 539px;
+    min-height: 752px;
+    .modal__form-textarea {
+        min-height: 96px;
+    }
+}
+
+#order-thanks {
+    @include flex;
+    width: 825px;
+    min-height: 330px;
+    padding: 88px 85px 97px;
+    margin: 0 auto;
+    div {
+        margin-left: 40px;
+    }
+}
+
+#one-click-buy-thanks {
+    width: 540px;
+    min-height: 367px;
+    padding: 50px;
+    .modal {
+        &__thanks-img {
+            display: block;
+            margin: 0 auto;
+        }
+        &__thanks-title, &__thanks-text {
+            text-align: center;
+        }
+        &__thanks-title {
+            margin: 30px 0 14px;
+        }
+    }
+}
+/* .jq-ry-container > .jq-ry-group-wrapper > .jq-ry-group > svg {
+    border-right: 0.7px solid rgba(#4F4F4F, .15);
+    padding-right: 33px;
+} */
+
+#one-click-buy {
+    .modal__form-textarea {
+        min-height: 96px;
+        margin-bottom: 30px;
+    }
+}
+
+#write-review, #one-click-buy, #one-click-buy-thanks, #order-thanks {
+    @include centerX;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+#authorization {
+    .modal__form-footer {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+
+#authorization.hide, #registration.hide, #change-password {
+    display: none;
+    margin-top: 100px;
+}
+
+
+@media(max-width: 991px) {
+    #write-review {
+        min-height: 724px;
+        overflow-y: scroll;
+    }
+    #one-click-buy {
+        min-height: 714px;
+        overflow-y: scroll;
+    }
+    #authorization.hide, #registration.hide, #change-password {
+        margin-top: 80px;
+    }
+}
+@media(max-width: 825px) {
+    #order-thanks {
+        width: 100%;
+    }
+}
+@media(max-width: 767px) {
+    #order-thanks {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        text-align: center;
+        div {
+            margin-left: 0;
+        }
+    }
+    #authorization.hide, #registration.hide, #change-password {
+        margin-top: 50px;
+    }
+}
+@media(max-width: 650px) {
+    .modal {
+        padding: 20px 15px;
+        &__form-title {
+            font-size: 18px;
+            line-height: 26px;
+            padding-bottom: 18px;
+            margin-bottom: 15px;
+        }
+        &__form-footer {
+            margin-top: 10px;
+        }
+    }
+}
+@media(max-width: 575px) {
+    #one-click-buy, #write-review {
+        width: 100%;
+    }
+    #authorization.hide, #registration.hide, #change-password {
+        margin-top: 30px;
+    }
+}

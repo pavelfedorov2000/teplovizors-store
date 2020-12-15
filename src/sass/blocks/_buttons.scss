@@ -1,0 +1,153 @@
+.button {
+    background-color: $button;
+    border-radius: $button-radius;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0.35px;
+    color: $white;
+    &--green {
+        background-color: $green;
+    }
+    &--gray {
+        background-color: #E0E0E0;
+    }
+}
+
+.border-button {
+    background-color: transparent;
+    border: 1px solid $button;
+    color: $button;
+}
+
+.clear-btn {
+    @include flex;
+    font-weight: 600;
+    color: $accent;
+    svg {
+        margin-right: 8px;
+    }
+}
+
+.basket-btn {
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 14px;
+    }
+}
+
+.compare-btn {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    line-height: 16px;
+    color: #4F4F4F;
+    svg {
+        margin-right: 5px;
+    }
+}
+
+.notify-btn {
+    display: none;
+    background: #E0E0E0;
+    color: #828282;
+}
+
+.icon-buttons {
+    display: flex;
+}
+
+.count-btn {
+    width: 28px;
+    height: 100%;
+    background: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    @include center;
+    &--disabled {
+        cursor: auto;
+        svg path {
+            stroke: #E0E0E0;
+        }
+    }
+}
+.plus-btn {
+    border-radius: 0px 3px 3px 0px;
+}
+.minus-btn {
+    border-radius: 3px 0px 0px 3px;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    color: $accent;
+    margin-top: 40px;
+    svg {
+        margin-right: 5px;
+    }
+}
+
+.enter-btn, .registration-btn, .register-btn, .buy-without-registration-btn, .send-password-btn {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.enter-btn, .registration-btn {
+    margin-right: 36px;
+}
+
+.forgot-password {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $accent;
+}
+
+.registration-btn {
+    font-weight: 600;
+    padding: 0;
+    color: $accent;
+}
+
+.buy-without-registration-btn {
+    margin-left: 37px;
+}
+
+.next-step-btn {
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+@media(max-width: 991px) {
+    .enter-btn, .registration-btn, .buy-without-registration-btn {
+        width: 100%;
+        margin: 0;
+    }
+    .enter-btn, .register-btn {
+        margin-bottom: 10px;
+    }
+    .forgot-password {
+        margin: 0 auto;
+    }
+    .back-btn {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .back-btn {
+        margin: 20px 0 30px;
+    }
+    .buy-without-registration-btn {
+        padding: 0;
+    }
+}
+
+@media(max-width: 575px) {
+    .next-step-btn {
+        width: 100%;
+    }
+}

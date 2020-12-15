@@ -1,0 +1,301 @@
+.header {
+    position: relative;
+    background: $accent;
+    //min-height: 166px;
+    color: $white;
+    &__top {
+        padding: 25px 0;
+        border-bottom: 0.5px solid rgba(#F2F2F2, .15);
+    }
+    &__inner {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    &__menu {
+        font-size: 14px;
+        line-height: 18px;
+        margin-right: 122px;
+        margin-left: auto;
+    }
+    &__menu-item {
+        display: inline-block;
+    }
+    &__menu-item + &__menu-item {
+        margin-left: 23px;
+    }
+    &__select-city {
+        background-color: transparent;
+        color: $white;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &__phone {
+        display: flex;
+        align-items: center;
+    }
+    &__phone-number {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        margin-left: 10px;
+    }
+    &__bottom {
+        height: 83px;
+    }
+    &__tabs {
+        display: flex;
+        height: 100%;
+    }
+    &__tab {
+        display: inline-block;
+        padding: 0 20px;
+        height: 100%;
+        @include center;
+        letter-spacing: 0.75px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: .3s all;
+    }
+    &__dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        opacity: 0;
+        background: #F8F8F8;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 30.1471px 24.1177px rgba(0, 0, 0, 0.0456112), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 4.5288px 3.62304px rgba(0, 0, 0, 0.0243888);
+        padding-top: 40px;
+        color: #333333;
+        visibility: hidden;
+        transition: .3s all;
+    }
+    &__tab--active {
+        background-color: $white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        color: $accent;
+        font-weight: 700;
+    }
+    &__logo {
+        //margin-left: 169px;
+        //margin-right: auto;
+    }
+    &__logo-img {
+        width: 246px;
+        max-width: 100%;
+        height: auto;
+    }
+    &__buttons-list {
+        display: flex;
+        align-items: center;
+    }
+    &__buttons-item {
+        display: inline-block;
+    }
+    &__buttons-item + &__buttons-item {
+        margin-left: 20px;
+    }
+    &__btn {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        @include center;
+    }
+    &__search {
+        position: relative;
+        width: 24px;
+        height: 38px;
+        &--active {
+            width: 554px;
+            .header {
+                &__logo {
+                    display: none;
+                    width: 0;
+                    height: 0;
+                    opacity: 0;
+                }
+                &__search-btn {
+                    right: auto;
+                    left: 10px;
+                }
+            }
+        }
+    }
+    &__search-btn {
+        @include centerY;
+        right: 0;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        background-image: url('../img/icons/header-buttons/search.svg');
+        cursor: pointer;
+    }
+    &__search-input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        width: 0px;
+        height: 100%;
+        border: none;
+        padding: 0;
+        padding: 7px 24px;
+        color: rgba(255, 255, 255, 0.3);
+        transition: .4s cubic-bezier(0, 0.8, 0, 1);
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        &:focus {
+            width: 100%;
+            border: 1px solid #E0E0E0;
+            border-radius: 3px;
+            padding: 7px 44px;
+            z-index: 1;
+        }
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            @include centerY;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            background-image: url('../img/icons/header-buttons/search-reset.svg');
+            cursor: pointer;
+        }
+    }
+    &__btn-num {
+        position: absolute;
+        top: -3px;
+        right: -5px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background-color: $orange;
+        @include center;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 16px;
+        color: $white;
+    }
+    &__user-btn {
+        position: relative;
+    }
+    &__dropdown-box {
+        position: absolute;
+        right: 0;
+        top: 39px;
+        z-index: 200;
+        width: 148px;
+        min-height: 172px;
+        background: #FFFFFF;
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+        border-radius: $button-radius;
+        padding: 25px 23px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s all;
+        a, button {
+            padding: 0;
+            color: #333333;
+            transition: .3s all;
+            &:hover {
+                font-weight: 600;
+            }
+        }
+        &--active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__dropdown-item + &__dropdown-item {
+        margin-top: 14px;
+    }
+    &__teplovizors {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+        padding-bottom: 40px;
+    }
+    &__teplovizors-item {
+        margin-bottom: 60px;
+        ul {
+            margin-bottom: 20px;
+            > li + li {
+                margin-top: 12px;
+            }
+        }
+        &:nth-child(7),
+        &:nth-child(8) {
+            margin-bottom: 0;
+        }
+    }
+    &__teplovizors-img {
+        height: 80px;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 20px;
+    }
+    &__teplovizors-title {
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    &__teplovizors-all {
+        align-items: center;
+        font-weight: 600;
+        line-height: 20px;
+        text-transform: none;
+        letter-spacing: -0.01em;
+    }
+    &__teplovizors-banner {
+        height: 281px;
+    }
+    &__brands-list {
+        justify-content: flex-start;
+    }
+    &__brands-item {
+        margin-bottom: 40px;
+    }
+    &__brands-logobox {
+        height: 89px;
+        background: #FFFFFF;
+        border-radius: $card-radius;
+        @include center;
+        margin-bottom: 20px;
+    }
+    &__brands-name {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.header__search.mobile, .header__search-btn.mobile {
+    display: none;
+}
+
+.header__search.mobile {
+    @include centerY;
+    left: -100%;
+    z-index: 1001;
+    transition: .3s all;
+}
+
+/* .header__tab.tab--active {
+    background-color: $white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: $accent;
+    font-weight: 700;
+} */
+
+.header__dropdown-menu.tabs__content--active {
+    visibility: visible;
+    opacity: 1;
+}

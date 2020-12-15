@@ -1,0 +1,362 @@
+* {
+    box-sizing: inherit;
+    &:before, &:after {
+        box-sizing: inherit;
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: #333333;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+select, button, input {
+    @include btn;
+}
+
+input {
+    cursor: auto;
+}
+
+input, textarea {
+    margin: 0;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+address {
+    font-style: normal;
+}
+
+hr {
+    border-width: 0px;
+    height: 0.7px;
+    background-color: $border-color;
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 1190px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+@media(max-width: 767px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+.section-header {
+    @include flex;
+}
+
+.menu {
+    display: flex;
+    font-size: 14px;
+    color: $white;
+}
+
+.tablet, .mobile {
+    display: none;
+}
+
+.descr {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.date {
+    color: #828282;
+}
+
+.list-item {
+    position: relative;
+    padding-left: 40px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        display: block;
+        width: 20px;
+        height: 5px;
+        border-radius: 1px;
+        background: $orange-gradient;
+    }
+}
+@media(max-width: 575px) {
+    .list-item {
+        padding-left: 30px;
+        &:before {
+            width: 14px;
+        }
+    }
+}
+
+.table-item {
+    display: flex;
+    padding: 12px 20px;
+    &:nth-child(odd) {
+        background: rgba(2, 65, 132, 0.05);
+    }
+}
+
+.more-link {
+    display: flex;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    svg {
+        margin-left: 10px;
+    }
+}
+
+.page-tab {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 24px 0 24px 22px;
+    border-bottom: 0.7px solid rgba(#4F4F4F, .15);
+    &:last-child {
+        border-bottom: none;
+    }
+    svg {
+        margin-right: 10px;
+    }
+    &--active {
+        font-weight: 600;
+        color: $accent;
+        svg path {
+            stroke: $accent;
+        }
+    }
+}
+@media(max-width: 650px) {
+    .page-tabs {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .page-tab {
+        width: 47%;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 991px) {
+    .page-tabs {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .page-tab {
+        padding: 10px 13px;
+        border: 1px solid #E0E0E0;
+        border-radius: $card-radius;
+        margin-right: 10px;
+        &--active {
+            background-color: $button;
+            color: $white;
+            svg path {
+                stroke: $white;
+            }
+        }
+    }
+}
+@media(max-width: 575px) {
+    .page-tabs {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .page-tab {
+        @include center;
+        width: 100%;
+        border: 1px solid #E0E0E0;
+        border-radius: $card-radius;
+        padding: 10px 0;
+        margin: 0;
+        margin-bottom: 12px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.white-box {
+    background: #FFFFFF;
+    border-radius: $card-radius;
+    padding: 40px 30px;
+    a, span {
+        font-weight: 500;
+        color: $accent;
+    }    
+}
+@media(max-width: 991px) {
+    .white-box {
+        padding: 30px 25px;
+    }
+}
+@media(max-width: 575px) {
+    .white-box {
+        padding: 20px 15px;
+    }
+}
+
+.gray-box {
+    background: #F8F8F8;
+    border-radius: $card-radius;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 22px;
+    &__title {
+        font-size: 13px;
+        line-height: 22px;
+    }
+}
+
+.attention-box {
+    border: 1px solid #E0E0E0;
+    border-radius: $card-radius;
+    padding: 11px 16px;
+    font-size: 13px;
+    line-height: 22px;
+    margin: 20px 0;
+    &__title {
+        position: relative;
+        color: $red;
+        margin-bottom: 2px;
+        padding-left: 21px;
+        &:before {
+            content: '';
+            @include centerY;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url('../img/icons/attention.svg');
+        }
+    }
+}
+@media(max-width: 991px) {
+    .attention-box {
+        width: 50%;
+    }
+}
+@media(max-width: 767px) {
+    .attention-box {
+        width: 100%;
+    }
+}
+
+.section-footer {
+    font-size: 12px;
+    line-height: 20px;
+    color: #4F4F4F;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    &:after {
+        content: '';
+        @include centerY;
+        right: 0;
+    }
+    &--active {
+        &:after {
+            top: 7px;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+@import 'blocks/titles';
+@import 'blocks/buttons';
+@import 'blocks/breadcrumbs';
+@import 'blocks/tabs';
+@import 'blocks/slick';
+
+@import 'blocks/header';
+@import 'blocks/search-results';
+@import 'blocks/footer';
+
+@import 'blocks/promo';
+@import 'blocks/cards-slider';
+@import 'blocks/banner-slider';
+@import 'blocks/features';
+@import 'blocks/categories';
+@import 'blocks/popular-cards';
+@import 'blocks/card';
+@import 'blocks/logos';
+@import 'blocks/news';
+@import 'blocks/contacts';
+@import 'blocks/catalog';
+@import 'blocks/pagination';
+@import 'blocks/recently-viewed';
+@import 'blocks/product';
+@import 'blocks/sale';
+
+@import 'blocks/payment';
+@import 'blocks/profile';
+@import 'blocks/order';
+@import 'blocks/favorite';
+@import 'blocks/basket';
+
+@import 'blocks/user-agreement';
+@import 'blocks/404';
+
+@import 'blocks/form';
+@import 'blocks/sort';
+@import 'blocks/video';
+@import 'blocks/modal';
+
+
+

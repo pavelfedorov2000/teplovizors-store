@@ -1,0 +1,16 @@
+.user-agreement {
+    margin-bottom: 100px;
+
+    // .user-agreement__title
+
+    &__title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 991px) {
+    .user-agreement__title {
+        margin-bottom: 30px;
+    }
+}

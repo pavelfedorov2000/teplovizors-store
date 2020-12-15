@@ -1,0 +1,12 @@
+.sale {
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__list {
+        @include flex;
+        flex-wrap: wrap;
+    }
+    &__list-item {
+        width: 255px;
+    }
+}

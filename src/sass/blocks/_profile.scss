@@ -1,0 +1,94 @@
+.profile{
+    &__item {
+        padding-bottom: 20px;
+        border-bottom: 0.7px solid rgba(#4F4F4F, .15);
+        margin-bottom: 30px;
+    }
+    &__item-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+}
+
+.profile-form {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 245px;
+    }
+    &__item-label {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    &__btn {
+        padding: 14px 20px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__btn + &__btn {
+        margin-left: 12px;
+    }
+}
+
+input[type="password"] {
+    -webkit-text-security: circle !important;
+}
+
+@media(max-width: 991px) {
+    .profile-form {
+        &__item {
+            width: 30%;
+        }
+    }
+    .profile {
+        &__password-item {
+            width: 48%;
+            &:first-child {
+                width: 100%;
+                input[type="password"] {
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .profile-form {
+        &__item {
+            width: 48%;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .profile-form {
+        &__item {
+            width: 100%;
+        }
+        &__buttons {
+            @include flex;
+        }
+        &__btn {
+            width: 48%;
+        }
+        &__btn + &__btn {
+            margin-left: 0;
+        }
+    }
+    .profile {
+        &__password-item {
+            width: 100%;
+            &:first-child {
+                input[type="password"] {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

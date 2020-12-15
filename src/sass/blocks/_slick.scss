@@ -1,0 +1,28 @@
+.slick {
+    &-dots {
+        @include centerX;
+        bottom: -60px;
+        li {
+            display: inline-block;
+            margin: 0 4.5px;
+        }
+        button {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #BDBDBD;
+            padding: 0;
+            font-size: 0;
+        }
+        .slick-active button {
+            background: $accent;
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .slick-dots button {
+        width: 10px;
+        height: 10px;
+    }
+}

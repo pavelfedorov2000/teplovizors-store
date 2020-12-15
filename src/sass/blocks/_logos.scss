@@ -1,0 +1,16 @@
+.logos {
+    min-height: 420px;
+    margin-bottom: 105px;
+    &__inner {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    &__item {
+        display: block;
+        margin: 0 25px 60px;
+    }
+}

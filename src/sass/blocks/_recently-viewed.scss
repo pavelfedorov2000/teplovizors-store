@@ -1,0 +1,33 @@
+.recently-viewed {
+    margin-top: 70px;
+    &__title {
+        font-size: 24px;
+        line-height: 35px;
+        margin-bottom: 45px;
+    }
+    &__inner {
+        @include flex;
+        background-color: #fff;
+        border-radius: $card-radius;
+        padding: 30px 20px;
+    }
+    &__item {
+        width: 187px;
+        min-height: 269px;
+    }
+    &__item-img {
+        display: block;
+        margin-bottom: 17px;
+    }
+    &__item-rate,
+    &__item-name {
+        margin-bottom: 12px;
+    }
+    &__item-notify {
+        margin-bottom: 14px;
+    }
+    &__item-price {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}

@@ -1,0 +1,96 @@
+.banner-slider {
+    margin-bottom: 100px;
+    &__item {
+        min-height: 542px;
+        background: url('../img/slider.jpg') center (center/cover) no-repeat;
+        min-height: 542px;
+        padding-top: 123px;
+        padding-left: 95px;
+        color: $white;
+    }
+    &__item-img {
+        display: none;
+    }
+    &__item-content {
+        width: 445px;
+    }
+    &__item-title {
+        font-size: 48px;
+        line-height: 70px;
+        margin-bottom: 20px;
+    }
+    &__item-text {
+        margin-bottom: 40px;
+    }
+    .slick {
+        &-dots {
+            bottom: 40px;
+            button {
+                background: $white;
+            }
+            .slick-active button {
+                background: $orange;
+            }
+        }
+        &-slide img {
+            display: none;
+        }
+    }
+}
+
+/* .main-page__banner-item {
+    
+}
+.discount-page__banner-item {
+    background: url('../img/slider.jpg') center (center/cover) no-repeat;
+    min-height: 542px;
+    padding-top: 123px;
+} */
+
+@media(max-width: 575px) {
+    .banner-slider {
+        &__item {
+            //min-height: 510px;
+            background-image: none;
+            background: $accent;
+            padding: 0;
+            border-radius: $card-radius;
+            .more-link {
+                justify-content: center;
+            }
+        }
+        &__item-content {
+            width: 100%;
+            color: $white;
+            text-align: center;
+            padding: 20px 20px 15px;
+        }
+        &__item-title {
+            font-weight: 800;
+            font-size: 26px;
+            line-height: 33px;
+        }
+        &__item-text {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        .slick {
+            &-dots {
+                bottom: 15px;
+                li {
+                    margin: 0 5px;
+                }
+                button {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+            &-slide img {
+                display: block;
+                width: 100%;
+                height: 266px;
+            }
+        }
+    }
+}

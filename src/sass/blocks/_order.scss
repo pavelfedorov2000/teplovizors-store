@@ -1,0 +1,154 @@
+.order-list {
+    &__item {
+        border: 1px solid #E0E0E0;
+        border-radius: $card-radius;
+        padding: 28px 30px 24px;
+    }
+    &__item + &__item {
+        margin-top: 20px;
+    }
+    &__item-header {
+        display: flex;
+        align-items: center;
+        //margin-bottom: 30px;
+        position: relative;
+        &:after {
+            width: 16px;
+            height: 10px;
+            background-image: url('../img/icons/arrows/drop.svg');
+        }
+    }
+    &__item-num {
+        margin-right: 20px;
+    }
+    &__item-sum {
+        width: 97px;
+        margin-right: 60px;
+    }
+    &__item-status {
+        position: relative;
+        width: 128px;
+        height: 17px;
+        margin-right: 20px;
+        &:before, &:after {
+            @include centerY;
+        }
+        &:before {
+            content: '';
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        &:after {
+            left: 18px;
+        }
+    }
+    &__item-datetime {
+        color: #BDBDBD;
+    }
+    &__item-footer {
+        @include flex;
+        b {
+            margin-left: 50px;
+        }
+    }
+}
+
+.order-list__item.issued {
+    .order-list__item-status {
+        &:before {
+            background-color: #219653;
+        }
+        &:after {
+            content: 'Выдан клиенту';
+        }
+    }
+}
+
+.order-list__item.canceled {
+    .order-list__item-status {
+        &:before {
+            background-color: $red;
+        }
+        &:after {
+            content: 'Заказ отменен';
+        }
+    }
+}
+
+.ordered-products {
+    &__list {
+        padding: 20px 0 32px;
+        border-top: 0.7px solid rgba(#4F4F4F, .2);
+        border-bottom: 0.7px solid rgba(#4F4F4F, .2);
+        margin: 30px 0;
+    }
+    &__item {
+        @include flex;
+    }
+    &__item + &__item {
+        margin-top: 15px;
+    }
+    &__item-name {
+        max-width: 137px;
+    }
+}
+
+@media(max-width: 700px) {
+    .order-list {
+        &__item {
+            padding: 20px 15px;
+        }
+        &__item-header {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__item-num, &__item-sum {
+            width: 50%;
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        &__item-sum {
+            text-align: right;
+        }
+        &__item-footer {
+            flex-wrap: wrap;
+            div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            div + div {
+                margin-top: 8px;
+            }
+        }
+    }
+    .order-list__item-header.dropdown:after {
+        display: none;
+    }
+    .ordered-products {
+        &__list {
+            padding: 10px 0 20px;
+            margin: 20px 0 10px;
+        }
+        &__item {
+            flex-wrap: wrap;
+        }
+        &__item + &__item {
+            margin-top: 14px;
+        }
+        &__item-img {
+            display: none;
+        }
+        &__item-name {
+            font-weight: 700;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 7px;
+        }
+        &__item-sum {
+            font-weight: 400;
+        }
+    }
+}

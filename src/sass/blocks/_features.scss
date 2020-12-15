@@ -1,0 +1,35 @@
+.features {
+    margin-bottom: 50px;
+    &__box {
+        background: #F7F7F7;
+        border-radius: $card-radius;
+        padding: 60px;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+    }
+    &__item-inner {
+        max-width: 291px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item-icon {
+        width: 65px;
+        height: 65px;
+        @include center;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 6px rgba(158, 158, 158, 0.22);
+        border-radius: 5px;
+    }
+    &__item-text {
+        width: 67%;
+    }
+    &__item-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.15px;
+        margin-bottom: 5px;
+    }
+}

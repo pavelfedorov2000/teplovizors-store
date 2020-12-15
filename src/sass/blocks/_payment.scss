@@ -1,0 +1,90 @@
+.payment {
+
+    &__logo-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+
+    &__logo-item {
+        width: 102.4px;
+        height: 64px;
+        @include center;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 6px rgba(158, 158, 158, 0.22);
+        border-radius: $card-radius;
+    }
+}
+@media(max-width: 991px) {
+    .payment {
+        &__logo-list {
+            width: 354px;
+        }
+        &__logo-item {
+            margin-bottom: 24px;
+        }
+    }
+}
+@media(max-width: 575px) {
+    .payment {
+        &__logo-list {
+            width: 100%;
+        }
+        &__logo-item {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.delivery {
+    &__table-item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        line-height: 20px;
+        padding-right: 130px;
+        span {
+            font-weight: 400;
+            color: #333333;
+        }
+    }
+}
+.delivery__table-item.list-item {
+    padding-left: 12px;
+    &:before {
+        display: none;
+    }
+}
+
+@media(max-width: 991px) {
+    .delivery {
+        &__table-item {
+            padding-right: 20px;
+        }
+    }
+}
+@media(max-width: 767px) {
+    .delivery__table-item {
+        justify-content: flex-start;
+        span {
+            font-weight: 500;
+            color: $accent;
+        }
+    }
+    .delivery__table-item.table-item {
+        display: inline-block;
+        &:nth-child(odd) {
+            background-color: #fff;
+        }
+    }
+    .delivery__table-item.list-item {
+        padding: 0;
+        padding-left: 21px;
+        &:before {
+            display: block;
+            width: 12px;
+            height: 5px;
+        }
+    }
+}

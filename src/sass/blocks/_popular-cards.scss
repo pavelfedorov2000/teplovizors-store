@@ -1,0 +1,31 @@
+.popular-cards {
+    margin-bottom: 80px;
+    &__title {
+        font-size: 48px;
+        line-height: 70px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        padding: 17px 50px 45px;
+        transition: .5s all;
+        cursor: pointer;
+        &:hover {
+            background: radial-gradient(31.2% 38.72% at 50.2% 28.72%, #5D9CDE 0%, rgba(1, 39, 79, 0) 100%), $accent;
+            border-radius: $card-radius;
+            .popular-cards__item-descr, .descr {
+                font-weight: bold;
+                color: $white;
+            }
+        }
+    }
+    &__item-descr {
+        color: #333333;
+        transition: .5s all;
+    }
+}

@@ -1,0 +1,29 @@
+.sort {
+    display: flex;
+    align-items: center;
+}
+
+.sort-list {
+    margin-left: 25px;
+    &__item {
+        display: inline-block;
+        cursor: pointer;
+        &--active {
+            position: relative;
+            font-weight: 600;
+            color: $accent;
+            padding-right: 20px;
+            &:after {
+                content: '';
+                @include centerY;
+                right: 0;
+                width: 16px;
+                height: 16px;
+                background-image: url('../img/icons/filter.svg');
+            }
+        }
+    }
+    &__item + &__item {
+        margin-left: 15px;
+    }
+}

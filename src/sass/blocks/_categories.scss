@@ -1,0 +1,97 @@
+.categories {
+    margin-bottom: 100px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        min-height: 540px;
+        border-radius: $card-radius;
+        background-repeat: no-repeat;
+        padding: 240px 0 53px 38px;
+        color: $white;
+        &:nth-child(1) {
+            width: 57%;
+            background-image: url('../img/categories-cards/1.jpg');
+        }
+        &:nth-child(2) {
+            width: 40%;
+            background-image: url('../img/categories-cards/2.jpg');
+        } 
+    }
+    &__item-inner {
+        width: 346px;
+    }
+    &__item-title {
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 50px;
+        margin-bottom: 19px;
+    }
+    &__item-descr {
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 991px) {
+    .categories {
+        &__inner {
+            //width: 1500px;
+            justify-content: flex-start;
+            overflow-x: scroll;
+        }
+        &__item {
+            min-height: 500px;
+            padding: 268px 0 40px 25px;
+            margin-right: 20px;
+            &:nth-child(1),
+            &:nth-child(2) {
+                width: 500px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__item-title {
+            line-height: 43px;
+            margin-bottom: 10px;
+        }
+        &__item-descr {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .categories {
+        &__item {
+            min-height: 399px;
+            border: 1px solid #E0E0E0;
+            border-radius: $card-radius;
+            padding: 0;
+            padding-bottom: 20px;
+            &:nth-child(1),
+            &:nth-child(2) {
+                width: 306px;
+                background-image: url('../img/categories-cards/mobile-card.jpg');
+                background-position: 0 0;
+            }
+        }
+        &__item-inner {
+            width: 306px;
+            padding: 200px 25px 0;
+            color: #333333;
+            svg path {
+                stroke: $accent;
+            }
+        }
+        &__item-title {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 10px;
+        }
+        &__item-link {
+            color: $accent;
+        }
+    }
+}
